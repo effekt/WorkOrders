@@ -1,0 +1,10 @@
+{
+    "development": {
+        "port": 80,
+        "api": "/api"
+    },
+    "production": {
+        "port": 80,
+        "api": "/api"
+    }
+}

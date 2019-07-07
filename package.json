@@ -1,0 +1,26 @@
+{
+  "name": "work-order-server",
+  "version": "1.0.0",
+  "description": "Backend for a simple work order management system.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "start-mongo-win": "concurrently --kill-others \"md mongodb & mongod --dbpath=./mongodb\" \"node server\"",
+    "start-mongo-mac": "concurrently --kill-others \"mkdir mongodb; mongod --dbpath=./mongodb;\" \"node server\"",
+    "install-run-win": "concurrently --kill-others \"md mongodb & start mongod --dbpath=./mongodb\" \"npm i & node server\"",
+    "install-run-mac": "concurrently --kill-others \"mkdir mongodb; start mongod --dbpath=./mongodb;\" \"npm i; node server;\""
+  },
+  "author": "Jesse Wheeler",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mocha": "^6.1.4",
+    "mongoose": "^5.6.3",
+    "morgan": "^1.9.1"
+  }
+}
